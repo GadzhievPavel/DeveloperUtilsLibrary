@@ -56,6 +56,7 @@
     <Compile Include="PluginLibrary.cs" />
     <Compile Include="ReferenceObjectExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StageController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
