@@ -29,6 +29,19 @@ namespace DeveloperUtilsLibrary
 
             return stage.Set(objects);
         }
+
+        /// <summary>
+        /// Можно редактировать или нет
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public static bool isEditable(ReferenceObject obj)
+        {
+            return obj.SystemFields.Stage.Guid.Equals(StageGuids.Корректировка) ||
+                obj.SystemFields.Stage.Guid.Equals(StageGuids.Разработка) ||
+                obj.SystemFields.Stage.Guid.Equals(StageGuids.Исправление);
+
+        }
     }
 
     public static class StageGuids
@@ -45,4 +58,6 @@ namespace DeveloperUtilsLibrary
         public static readonly Guid Утверждение = new Guid("a3471b72-32e9-4669-a4b8-0fcafcfc3eb6");
         public static readonly Guid Нормоконтроль = new Guid("3442cf1a-9f8b-4b7d-96de-01a5636d90fb");
     }
+
+
 }
